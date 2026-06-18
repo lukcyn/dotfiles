@@ -1,3 +1,6 @@
+---@type any
+hl = hl
+
 local apps = require("modules.apps")
 
 hl.on("hyprland.start", function()

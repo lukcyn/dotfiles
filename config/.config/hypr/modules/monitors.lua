@@ -1,6 +1,9 @@
+---@type any
+hl = hl
+
 hl.monitor({
-  output   = "",
-  mode     = "preferred",
+  output = "DP-6",
+  mode = "preferred",
   position = "auto",
-  scale    = "auto",
+  scale = "auto",
 })

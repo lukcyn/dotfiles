@@ -1,3 +1,6 @@
+---@type any
+hl = hl
+
 hl.config({
   general = {
     gaps_in          = 5,
@@ -7,13 +10,12 @@ hl.config({
     col              = {
       active_border   = {
         colors = {
-          "rgba(bb9af7ee)", -- purple (focus)
-          "rgba(7aa2f7ee)"  -- blue accent
+          "rgba(bb9af7ee)", "rgba(7aa2f7ee)"
         },
         angle = 45
       },
 
-      inactive_border = "rgba(565f89aa)", -- muted Tokyo Night gray
+      inactive_border = "rgba(565f89aa)",
     },
 
     resize_on_border = false,
@@ -44,6 +46,6 @@ hl.config({
   },
 
   animations = {
-    enabled = true,
+    enabled = false,
   },
 })

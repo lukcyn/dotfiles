@@ -1,6 +1,9 @@
+---@type any
+hl = hl
+
 hl.config({
   input = {
-    kb_layout = "us",
+    kb_layout = "pl",
     follow_mouse = 1,
     sensitivity = 0,
 
