@@ -14,8 +14,7 @@ hl.bind(mod .. " + SHIFT + D", hl.dsp.exec_cmd(apps.discord))
 
 -- App management
 hl.bind(mod .. " + W", hl.dsp.window.close())
-hl.bind(mod .. " + T", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mod .. " + SHIFT + W", hl.dsp.window.kill())
 hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
@@ -24,6 +23,16 @@ hl.bind(mod .. " + h", hl.dsp.focus({ direction = "left" }))
 hl.bind(mod .. " + l", hl.dsp.focus({ direction = "right" }))
 hl.bind(mod .. " + k", hl.dsp.focus({ direction = "up" }))
 hl.bind(mod .. " + j", hl.dsp.focus({ direction = "down" }))
+
+hl.bind(mod .. " + SHIFT + h", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mod .. " + SHIFT + l", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mod .. " + SHIFT + k", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mod .. " + SHIFT + j", hl.dsp.window.move({ direction = "down" }))
+
+hl.bind(mod .. " + F", hl.dsp.window.fullscreen())
+hl.bind(mod .. " + SHIFT + P", hl.dsp.window.pin())
+hl.bind(mod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 
 for i = 1, 10 do
   local key = i % 10
@@ -74,3 +83,4 @@ hl.bind("Print",
 hl.bind("SHIFT + Print",
   hl.dsp.exec_cmd("grimblast copy screen"),
   { locked = true })
+
