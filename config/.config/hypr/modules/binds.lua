@@ -31,7 +31,29 @@ for i = 1, 10 do
   hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
--- Misc
+-- UTILITY
+-- Brightness
+hl.bind("XF86MonBrightnessUp",
+  hl.dsp.exec_cmd("brightnessctl set 5%+"),
+  { locked = true, repeating = true })
+
+hl.bind("XF86MonBrightnessDown",
+  hl.dsp.exec_cmd("brightnessctl set 5%-"),
+  { locked = true, repeating = true })
+
+-- Audio controll
+hl.bind("XF86AudioPlay",
+  hl.dsp.exec_cmd("playerctl -a play-pause"),
+  { locked = true, repeating = true })
+
+hl.bind("XF86AudioNext",
+  hl.dsp.exec_cmd("playerctl next"),
+  { locked = true, repeating = true })
+
+hl.bind("XF86AudioPrev",
+  hl.dsp.exec_cmd("playerctl previous"),
+  { locked = true, repeating = true })
+
 hl.bind("XF86AudioRaiseVolume",
   hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
   { locked = true, repeating = true })
@@ -44,10 +66,11 @@ hl.bind("XF86AudioMute",
   hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
   { locked = true, repeating = true })
 
-hl.bind("XF86MonBrightnessUp",
-  hl.dsp.exec_cmd("brightnessctl set 5%+"),
-  { locked = true, repeating = true })
+-- Screenshot
+hl.bind("Print",
+  hl.dsp.exec_cmd("grimblast copy area"),
+  { locked = true })
 
-hl.bind("XF86MonBrightnessDown",
-  hl.dsp.exec_cmd("brightnessctl set 5%-"),
-  { locked = true, repeating = true })
+hl.bind("SHIFT + Print",
+  hl.dsp.exec_cmd("grimblast copy screen"),
+  { locked = true })
