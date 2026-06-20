@@ -4,7 +4,7 @@ hl = hl
 return {
   terminal    = "kitty",
   fileManager = "dolphin",
-  menu        = "rofi -show drun",
+  menu        = "/home/lukcyn/.config/rofi/launchers/type-3/launcher.sh",
   statusBar   = "waybar",
   browser     = "brave",
   wallpaper   = "hyprpaper",

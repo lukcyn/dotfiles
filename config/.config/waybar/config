@@ -3,11 +3,11 @@
   "layer": "top",
   "position": "top",
   "mod": "dock",
-"margin-top": 4,
+  "margin-top": 4,
   "margin-left": 10,
   "margin-right": 10,
   "margin-bottom": 0,
- 
+
   "group/left1": {
     "orientation": "inherit",
     "modules": ["clock", "custom/voxtype", "custom/idle-indicator", "custom/notification-silencing-indicator", "custom/weather"]
@@ -43,7 +43,7 @@
     "orientation": "inherit",
     "modules": ["tray"]
   },
-     "group/right2": {
+  "group/right2": {
     "orientation": "inherit",
     "modules": [
     "backlight",
@@ -60,40 +60,6 @@
     "format": "{id}",
     "persistent-workspaces": {
       "*": [1, 2, 3, 4, 5]
-    }
-  },
-   "custom/updatespacman": {
-    "format": "{}{icon}",
-    "return-type": "json",
-    "format-icons": {
-      "has-updates": " 󰏖",
-      "updated": ""
-    },
-    "exec-if": "which waybar-module-pacman-updates",
-    "exec": "waybar-module-pacman-updates --no-zero-output"
-  },
-   "hyprland/window": {
-    "format": "{title} - {class}",
-    "max-length": 85,
-    "rewrite": {
-      " - ": "", // if no window is focused, a single dash is displayed, this removes it
-      "(.*?) - Chromium - chromium": "   $1 ",
-      "(.*chrome)...(.*)": "   $1 ",
-      "(.*) - Obsidian - .* - obsidian": "   $1 ",
-      "(.*nvim)...(.*)": "   $2 ",
-      "(.*code) - (.*)": " 󰨞  $1 ",
-      "^.*btop( .*|$)": " 󰧨 BTOP $1 ",
-      "^.*cmatrix( .*|$)": " 󰘨 MATRIX $1 ",
-      "(.*) - Spotify": "  $1 ",
-      "(.*) - com.mitchellh.ghostty": " 󰊠 $1 ",
-      "(.*) - Alacritty": "   $1 ",
-      "(.*) - BeeperTexts": " 󰻞  $1 ",
-      "(.*Discord)...(.*).. (.*)": "   $2 ",
-      "(.*) - org.gnome.Nautilus": " 󰣆  $1 ",
-      "(.*) - fish": "   [$1] ",
-      "(.*Steam)...(.*)": "   $1",
-      "(.*imv)...(.*).. (.*)": "   $2",
-      "(.*) - com.obsproject.Studio": "  $1 "
     }
   },
  "cpu": {
@@ -120,13 +86,6 @@
       }
     },
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "󰛨",
-      "deactivated": "󰛩"
-    }
   },
   "network": {
     "format-icons": [
