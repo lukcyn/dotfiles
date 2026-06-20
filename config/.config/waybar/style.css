@@ -46,6 +46,13 @@ window#waybar {
   transition: all 0.2s ease-in-out;
 }
 
+#custom-power {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
 #left1 {
   background-color: @overlay; 
   border-radius: 2px;
