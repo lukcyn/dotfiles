@@ -36,9 +36,9 @@
     "modules": [
     "backlight",
     "bluetooth",
+    "network",    
     "pulseaudio#output",
-    "pulseaudio#input",
-    "network",
+    "pulseaudio#input",    
     "memory",
     "cpu",
     "battery"
@@ -72,8 +72,7 @@
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
         "today": "<span color='#ff6699'><b>{}</b></span>"
       }
-    },
-    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+    }
   },
   "network": {
     "format-icons": [
@@ -93,6 +92,16 @@
     "interval": 3,
     "nospacing": 1,
     "on-click": "~/.local/bin/wifi-gui"
+  },
+  "pulseaudio#output": {
+    "format": "  {volume:02}%",
+    "format-muted": "  muted",
+    "tooltip": false
+  },
+  "pulseaudio#input": {
+    "format": " {volume:02}%",
+    "format-muted": "  muted",
+    "tooltip": false
   },
   "bluetooth": {
     "format": "",
