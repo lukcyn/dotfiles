@@ -1,3 +1,5 @@
 #!/bin/sh
-exec alacritty --class=Impala -e impala
 
+nmcli radio wifi on
+
+exec alacritty --class=Impala -e impala

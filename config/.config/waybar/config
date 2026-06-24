@@ -91,7 +91,8 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "~/.local/bin/wifi-gui"
+    "on-click": "~/.local/bin/wifi-gui",
+    "on-click-right": "~/.local/bin/wifi-toggle"
   },
   "pulseaudio#output": {
     "format": "  {volume:02}%",
@@ -109,6 +110,7 @@
     "format-off": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "~/.local/bin/bluetooth-gui"
+    "on-click": "~/.local/bin/bluetooth-gui",
+    "on-click-right": "~/.local/bin/bluetooth-toggle"
   }
 }

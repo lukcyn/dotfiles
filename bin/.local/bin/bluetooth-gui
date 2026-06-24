@@ -1,2 +1,4 @@
 #!/bin/sh
+
+bluetoothctl power on
 exec alacritty --class=BlueTUI -e bluetui
