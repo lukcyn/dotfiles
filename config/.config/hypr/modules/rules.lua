@@ -23,3 +23,23 @@ hl.window_rule({
   move = "20 monitor_h-120",
   float = true,
 })
+
+hl.window_rule({
+  name = "bluetui-float",
+  match = {
+    class = "BlueTUI",
+  },
+  float = true,
+  center = true,
+  size = "1000 700",
+})
+
+hl.window_rule({
+  name = "impala-float",
+  match = {
+    class = "Impala",
+  },
+  float = true,
+  center = true,
+  size = "1000 700",
+})

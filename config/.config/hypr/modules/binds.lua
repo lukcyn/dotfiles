@@ -12,6 +12,10 @@ hl.bind(mod .. " + SHIFT + B", hl.dsp.exec_cmd(apps.browser))
 hl.bind(mod .. " + SHIFT + S", hl.dsp.exec_cmd(apps.steam))
 hl.bind(mod .. " + SHIFT + D", hl.dsp.exec_cmd(apps.discord))
 
+-- Settings
+hl.bind(mod .. " + CTRL + B", hl.dsp.exec_cmd(apps.bluetooth))
+hl.bind(mod .. " + CTRL + W", hl.dsp.exec_cmd(apps.wifi))
+
 -- App management
 hl.bind(mod .. " + W", hl.dsp.window.close())
 hl.bind(mod .. " + SHIFT + W", hl.dsp.window.kill())
@@ -83,4 +87,3 @@ hl.bind("Print",
 hl.bind("SHIFT + Print",
   hl.dsp.exec_cmd("grimblast copy screen"),
   { locked = true })
-
