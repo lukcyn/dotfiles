@@ -14,7 +14,7 @@ hl.window_rule({
     float = true,
     fullscreen = false,
   },
-  no_focus = true,
+  no_focus = false,
 })
 
 hl.window_rule({

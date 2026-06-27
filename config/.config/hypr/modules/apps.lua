@@ -7,7 +7,7 @@ return {
   menu        = "~/.config/rofi/launchers/type-3/launcher.sh",
   statusBar   = "waybar",
   browser     = "brave",
-  wallpaper   = "hyprpaper",
+  wallpaper   = "waypaper",
   discord     = "discord",
   steam       = "steam",
   bluetooth   = "~/.local/bin/bluetooth-gui",
