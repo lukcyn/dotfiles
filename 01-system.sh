@@ -6,6 +6,7 @@ sudo pacman -Syu --noconfirm
 
 sudo pacman -S --needed --noconfirm \
     base-devel \
+    less \
     git \
     curl \
     wget \

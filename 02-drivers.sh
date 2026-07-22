@@ -2,39 +2,45 @@
 
 set -euo pipefail
 
-echo "Select GPU:"
-echo "1) AMD"
-echo "2) Intel"
-echo "3) NVIDIA"
+GPU=$(lspci | grep -E "VGA|3D")
 
-read -r -p "Choice: " GPU
+echo "Detected GPU:"
+echo "$GPU"
 
-case $GPU in
+if echo "$GPU" | grep -qi "AMD"; then
 
-1)
-sudo pacman -S --needed --noconfirm \
-    mesa \
-    vulkan-radeon \
-    libva-mesa-driver
-;;
+    echo "Installing AMD drivers..."
 
-2)
-sudo pacman -S --needed --noconfirm \
-    mesa \
-    vulkan-intel \
-    intel-media-driver
-;;
+    sudo pacman -S --needed --noconfirm \
+        mesa \
+        vulkan-radeon \
+        libva-mesa-driver \
+        libva-utils
 
-3)
-sudo pacman -S --needed --noconfirm \
-    nvidia \
-    nvidia-utils \
-    egl-wayland
-;;
+elif echo "$GPU" | grep -qi "Intel"; then
 
-*)
-echo "Invalid option"
-exit 1
-;;
+    echo "Installing Intel drivers..."
 
-esac
+    sudo pacman -S --needed --noconfirm \
+        mesa \
+        vulkan-intel \
+        intel-media-driver \
+        libva-utils
+
+elif echo "$GPU" | grep -qi "NVIDIA"; then
+
+    echo "Installing NVIDIA drivers..."
+
+    sudo pacman -S --needed --noconfirm \
+        nvidia-utils \
+        egl-wayland \
+        nvidia-settings
+
+    # Try open kernel module first
+    sudo pacman -S --needed --noconfirm nvidia-open || \
+    sudo pacman -S --needed --noconfirm nvidia
+
+else
+    echo "Unknown GPU"
+    exit 1
+fi
