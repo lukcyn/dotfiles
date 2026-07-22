@@ -2,45 +2,46 @@
 
 set -euo pipefail
 
-GPU=$(lspci | grep -E "VGA|3D")
+GPU=$(lspci | grep -Ei "vga|3d|display")
 
 echo "Detected GPU:"
 echo "$GPU"
 
-if echo "$GPU" | grep -qi "AMD"; then
+if systemd-detect-virt --quiet; then
+    echo "Virtual machine detected"
+    
+    sudo pacman -S --needed --noconfirm \
+        mesa \
+        vulkan-virtio \
+        libva-mesa-driver
 
-    echo "Installing AMD drivers..."
+    exit 0
+fi
+
+
+if echo "$GPU" | grep -qi "amd\|ati"; then
 
     sudo pacman -S --needed --noconfirm \
         mesa \
         vulkan-radeon \
-        libva-mesa-driver \
-        libva-utils
+        libva-mesa-driver
 
-elif echo "$GPU" | grep -qi "Intel"; then
-
-    echo "Installing Intel drivers..."
+elif echo "$GPU" | grep -qi "intel"; then
 
     sudo pacman -S --needed --noconfirm \
         mesa \
         vulkan-intel \
-        intel-media-driver \
-        libva-utils
+        intel-media-driver
 
-elif echo "$GPU" | grep -qi "NVIDIA"; then
-
-    echo "Installing NVIDIA drivers..."
+elif echo "$GPU" | grep -qi "nvidia"; then
 
     sudo pacman -S --needed --noconfirm \
         nvidia-utils \
         egl-wayland \
         nvidia-settings
 
-    # Try open kernel module first
-    sudo pacman -S --needed --noconfirm nvidia-open || \
-    sudo pacman -S --needed --noconfirm nvidia
-
 else
-    echo "Unknown GPU"
+    echo "Unknown GPU:"
+    echo "$GPU"
     exit 1
 fi
