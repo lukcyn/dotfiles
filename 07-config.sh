@@ -19,7 +19,7 @@ for config in "${configs[@]}"; do
         echo "Stowing $config"
 
         stow \
-            --target="$HOME" \
+            --adopt --target="$HOME" \
             "$config"
     fi
 done
