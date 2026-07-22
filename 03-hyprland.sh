@@ -16,4 +16,7 @@ sudo pacman -S --needed --noconfirm \
     brightnessctl \
     playerctl \
     xdg-desktop-portal \
-    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-hyprland \
+    sddm
+
+sudo systemctl enable sddm
