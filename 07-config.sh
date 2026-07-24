@@ -14,6 +14,7 @@ configs=(
     config
 )
 
+# Hack: stow adopt to link existing files, then git restore to change their content
 for config in "${configs[@]}"; do
     if [ -d "$config" ]; then
         echo "Stowing $config"
@@ -23,3 +24,5 @@ for config in "${configs[@]}"; do
             "$config"
     fi
 done
+
+git restore -- .
