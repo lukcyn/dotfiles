@@ -14,12 +14,6 @@
     "on-click": "~/.config/rofi/powermenu/type-1/powermenu.sh"
   },
 
-  "custom/wallpaper": {
-    "format": "󰸉",
-    "tooltip": "Next wallpaper",
-    "on-click": "~/.local/bin/wallpaper-next"
-  },
-
   "group/left1": {
     "orientation": "inherit",
     "modules": ["clock", "custom/voxtype", "custom/idle-indicator", "custom/notification-silencing-indicator", "custom/weather"]
@@ -40,7 +34,6 @@
   "group/right1": {
     "orientation": "inherit",
     "modules": [
-    "custom/wallpaper",
     "backlight",
     "bluetooth",
     "network",    
@@ -111,7 +104,6 @@
     "format-off": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "~/.local/bin/bluetooth-gui",
-    "on-click-right": "~/.local/bin/bluetooth-toggle"
+    "on-click": "~/.local/bin/bluetooth-gui"
   }
 }
