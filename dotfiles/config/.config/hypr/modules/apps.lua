@@ -4,7 +4,7 @@ hl = hl
 return {
   terminal    = "kitty",
   fileManager = "dolphin",
-  menu        = "~/.config/rofi/launchers/type-3/launcher.sh",
+  menu        = "~/dotfiles/lib/rofi/launchers/type-3/launcher.sh",
   statusBar   = "waybar",
   browser     = "brave-origin",
   wallpaper   = "waypaper --restore",
