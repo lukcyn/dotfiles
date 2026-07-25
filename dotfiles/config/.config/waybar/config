@@ -11,7 +11,7 @@
   "custom/power": {
     "format": "",
     "tooltip": "Power menu",
-    "on-click": "~/dotfiles/lib/rofi/powermenu/type-1/powermenu.sh"
+    "on-click": "${HOME}/.config/rofi/scripts/powermenu_t1"
   },
 
   "group/left1": {

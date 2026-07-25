@@ -16,3 +16,4 @@ PS1='[\u@\h \W]\$ '
 [ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.config/rofi/scripts:$PATH"

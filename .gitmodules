@@ -1,0 +1,3 @@
+[submodule "lib/rofi-additional-themes"]
+	path = lib/rofi-additional-themes
+	url = https://github.com/adi1090x/rofi.git
