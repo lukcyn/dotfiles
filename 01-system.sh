@@ -24,3 +24,15 @@ sudo systemctl enable NetworkManager
 # Dir setup
 sudo pacman -S xdg-user-dirs
 xdg-user-dirs-update
+
+mkdir -p ${HOME}/dev/repo
+mkdir -p ${HOME}/dev/project
+
+# yay
+cd ${HOME}/dev/repo
+
+if [ ! -d "$HOME/yay" ]; then
+  git clone https://aur.archlinux.org/yay.git yay
+fi
+
+cd yay && makepkg -si

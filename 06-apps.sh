@@ -3,18 +3,20 @@
 set -euo pipefail
 
 sudo pacman -S --needed --noconfirm \
-    firefox \
-    btop \
-    fastfetch \
-    htop \
-    unzip \
-    zip \
-    fzf \
-    tree \
-    yazi 
+  btop \
+  fastfetch \
+  htop \
+  unzip \
+  zip \
+  fzf \
+  tree \
+  yazi \
+  discord
 
-# Neovim 
+# Neovim
 sudo pacman -S --needed --noconfirm \
-    ripgrep \
-    fd \
-    lazygit
+  ripgrep \
+  fd \
+  lazygit
+
+yay -S --noconfirm brave-origin-bin
