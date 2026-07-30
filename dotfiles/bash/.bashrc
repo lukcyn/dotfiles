@@ -5,8 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias ll='ls -la --color=auto'
+alias ls='lsd'
+alias ll='lsd -la'
 alias grep='grep --color=auto'
 alias vim='nvim'
 

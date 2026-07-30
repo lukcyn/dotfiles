@@ -11,6 +11,7 @@ sudo pacman -S --needed --noconfirm \
   fzf \
   tree \
   yazi \
+  lsd \
   discord
 
 # Neovim
