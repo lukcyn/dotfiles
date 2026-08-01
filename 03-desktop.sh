@@ -20,7 +20,8 @@ sudo pacman -S --needed --noconfirm \
   xdg-desktop-portal \
   xdg-desktop-portal-hyprland \
   sddm \
-  rofi
+  rofi \
+  alacritty
 
 sudo systemctl enable sddm
 
