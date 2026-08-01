@@ -21,7 +21,10 @@ sudo pacman -S --needed --noconfirm \
   xdg-desktop-portal-hyprland \
   sddm \
   rofi \
-  alacritty
+  alacritty \
+  bluez \
+  bluetui \
+  impala
 
 sudo systemctl enable sddm
 
