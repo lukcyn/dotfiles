@@ -10,14 +10,9 @@ run_step() {
   bash "$DIR/$1"
 }
 
-run_step 01-system.sh
-run_step 02-drivers.sh
-run_step 03-desktop.sh
-run_step 04-audio.sh
-run_step 05-font.sh
-run_step 06-apps.sh
-run_step 07-dotfiles-setup.sh
-run_step 08-post-install.sh
+for script in [0-9][0-9]-*.sh; do
+  run_step "$script"
+done
 
 echo
 echo "==> Arch Hyprland setup finished"

@@ -21,13 +21,8 @@ sudo pacman -S --needed --noconfirm \
   xdg-desktop-portal-hyprland \
   sddm \
   rofi \
-  alacritty \
-  bluez \
-  bluez-utils \
-  bluetui \
-  impala
+  alacritty
 
-sudo systemctl enable --now bluetooth.service
 sudo systemctl enable sddm
 
 cd $ROFI_THEME_DIR

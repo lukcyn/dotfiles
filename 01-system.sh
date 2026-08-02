@@ -13,13 +13,10 @@ sudo pacman -S --needed --noconfirm \
   unzip \
   rsync \
   neovim \
-  iwd \
   openssh \
   man-db \
   man-pages \
   bash-completion
-
-sudo systemctl enable --now iwd
 
 # Dir setup
 sudo pacman -S xdg-user-dirs
