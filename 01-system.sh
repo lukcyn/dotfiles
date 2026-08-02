@@ -13,13 +13,13 @@ sudo pacman -S --needed --noconfirm \
   unzip \
   rsync \
   neovim \
-  networkmanager \
+  iwd \
   openssh \
   man-db \
   man-pages \
   bash-completion
 
-sudo systemctl enable NetworkManager
+sudo systemctl enable --now iwd
 
 # Dir setup
 sudo pacman -S xdg-user-dirs

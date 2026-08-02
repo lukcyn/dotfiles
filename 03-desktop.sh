@@ -23,9 +23,11 @@ sudo pacman -S --needed --noconfirm \
   rofi \
   alacritty \
   bluez \
+  bluez-utils \
   bluetui \
   impala
 
+sudo systemctl enable --now bluetooth.service
 sudo systemctl enable sddm
 
 cd $ROFI_THEME_DIR
