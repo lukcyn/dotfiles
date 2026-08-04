@@ -1,4 +1,5 @@
 require("modules.env")
+require("modules.config")
 require("modules.rules")
 require("modules.monitors")
 require("modules.apps")

@@ -1,0 +1,9 @@
+---@type any
+hl = hl
+
+hl.config({
+	xwayland = {
+		force_zero_scaling = true,
+		use_nearest_neighbor = true,
+	},
+})
