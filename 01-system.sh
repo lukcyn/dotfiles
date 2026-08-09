@@ -16,7 +16,8 @@ sudo pacman -S --needed --noconfirm \
   openssh \
   man-db \
   man-pages \
-  bash-completion
+  bash-completion \
+  inetutils
 
 # Dir setup
 sudo pacman -S --needed --noconfirm xdg-user-dirs

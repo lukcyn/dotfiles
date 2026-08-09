@@ -19,11 +19,11 @@ sudo pacman -S --needed --noconfirm \
   playerctl \
   xdg-desktop-portal \
   xdg-desktop-portal-hyprland \
-  sddm \
+  cosmic-greeter \
   rofi \
   alacritty
 
-sudo systemctl enable sddm
+sudo systemctl enable cosmic-greeter.service
 
 cd $ROFI_THEME_DIR
 bash setup.sh
