@@ -9,6 +9,7 @@ alias ls='lsd'
 alias ll='lsd -la'
 alias grep='grep --color=auto'
 alias vim='nvim'
+alias waybar-reload='killall -SIGUSR2 waybar'
 
 PS1='[\u@\h \W]\$ '
 

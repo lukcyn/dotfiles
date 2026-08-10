@@ -34,10 +34,10 @@
   "group/right1": {
     "orientation": "inherit",
     "modules": [
-    "backlight",
     "bluetooth",
-    "network",    
+    "network",
     "pulseaudio#output",
+    "backlight",
     "memory",
     "cpu",
     "battery"
@@ -90,12 +90,17 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "~/.local/bin/wifi-gui",
-    "on-click-right": "~/.wifi-toggle"
+    "on-click": "~/.local/bin/wifi-gui"
   },
   "pulseaudio#output": {
-    "format": "  {volume:02}%",
-    "format-muted": "  muted",
+    "format": " {volume:02}%",
+    "format-muted": " 00%",
+    "tooltip": false,
+    "on-click": "~/.local/bin/audio-gui"
+  },
+  "backlight": {
+    "format": "󰃠 {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
     "tooltip": false
   },
   "bluetooth": {
@@ -105,5 +110,10 @@
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "~/.local/bin/bluetooth-gui"
+  },
+  "battery": {
+    "format": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false
   }
 }
