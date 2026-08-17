@@ -21,7 +21,8 @@ sudo pacman -S --needed --noconfirm \
   xdg-desktop-portal-hyprland \
   cosmic-greeter \
   rofi \
-  alacritty
+  alacritty \
+  awww
 
 sudo systemctl enable cosmic-greeter.service
 
