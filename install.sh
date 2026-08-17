@@ -16,3 +16,16 @@ done
 
 echo
 echo "==> Arch Hyprland setup finished"
+echo
+echo "A reboot is recommended to apply all changes."
+read -r -p "Reboot now? [y/N] " answer
+
+case "$answer" in
+  [yY]|[yY][eE][sS])
+    echo "Rebooting..."
+    sudo reboot
+    ;;
+  *)
+    echo "Reboot skipped."
+    ;;
+esac
