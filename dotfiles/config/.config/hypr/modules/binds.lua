@@ -15,6 +15,7 @@ hl.bind(mod .. " + SHIFT + D", hl.dsp.exec_cmd(apps.discord))
 -- Settings
 hl.bind(mod .. " + CTRL + B", hl.dsp.exec_cmd(apps.bluetooth))
 hl.bind(mod .. " + CTRL + W", hl.dsp.exec_cmd(apps.wifi))
+hl.bind(mod .. " + CTRL + F", hl.dsp.exec_cmd(apps.fileExplorer))
 
 -- App management
 hl.bind(mod .. " + W", hl.dsp.window.close())

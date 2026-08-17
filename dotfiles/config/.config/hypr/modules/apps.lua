@@ -12,4 +12,5 @@ return {
 	steam = "steam",
 	bluetooth = "${HOME}/.local/bin/bluetooth-gui",
 	wifi = "${HOME}/.local/bin/wifi-gui",
+	fileExplorer = "alacritty --class=Yazi -e yazi",
 }
