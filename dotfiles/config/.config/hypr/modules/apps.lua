@@ -3,7 +3,6 @@ hl = hl
 
 return {
 	terminal = "kitty",
-	fileManager = "dolphin",
 	menu = "${HOME}/.config/rofi/scripts/launcher_t3",
 	statusBar = "waybar",
 	browser = "brave-origin",
