@@ -4,6 +4,7 @@ hl = hl
 return {
 	terminal = "kitty",
 	menu = "${HOME}/.config/rofi/scripts/launcher_t3",
+	powermenu = "${HOME}/.config/rofi/scripts/powermenu_t4",
 	statusBar = "waybar",
 	browser = "brave-origin",
 	wallpaper = "awww-daemon",

@@ -11,6 +11,7 @@ hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd(apps.menu))
 hl.bind(mod .. " + SHIFT + B", hl.dsp.exec_cmd(apps.browser))
 hl.bind(mod .. " + SHIFT + S", hl.dsp.exec_cmd(apps.steam))
 hl.bind(mod .. " + SHIFT + D", hl.dsp.exec_cmd(apps.discord))
+hl.bind(mod .. " + ESCAPE", hl.dsp.exec_cmd(apps.powermenu))
 
 -- Settings
 hl.bind(mod .. " + CTRL + B", hl.dsp.exec_cmd(apps.bluetooth))
